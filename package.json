@@ -7,12 +7,11 @@
   "scripts": {
     "artisan": "bun artisan.ts",
     "build": "NODE_ENV=production vite build --outDir=client && vite build --outDir=server --ssr ./entry-server.ts",
-    "dev": "bun index.ts",
+    "dev": "rm -rf client server && bun index.ts",
     "serve": "NODE_ENV=production bun index.ts",
     "lint": "tsc --noEmit && prettier . --check && eslint . --fix",
     "prettier": "prettier . --write",
     "format": "npm run prettier && npm run lint",
-    "test": "bun test",
     "drizzle": "drizzle-kit",
     "scn": "npx shadcn-ui@latest"
   },
